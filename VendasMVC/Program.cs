@@ -4,6 +4,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<VendasMVCContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("VendasMVCContext") ?? throw new InvalidOperationException("Connection string 'VendasMVCContext' not found.")));
 
+
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
