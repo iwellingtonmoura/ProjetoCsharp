@@ -13,4 +13,8 @@ using VendasMVC.Models;
         }
 
         public DbSet<VendasMVC.Models.Departament>? Departament { get; set; }
-    }
+
+        public DbSet<VendasMVC.Models.Seller>? Seller { get; set; }
+
+        public DbSet<VendasMVC.Models.SalesRecord>? SalesRecord { get; set; }
+}
