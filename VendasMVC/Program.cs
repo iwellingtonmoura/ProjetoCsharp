@@ -2,7 +2,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<VendasMVCContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("VendasMVCContext") ?? throw new InvalidOperationException("Connection string 'VendasMVCContext' not found.")));
+    options.UseMySql("server=localhost;initial catalog=vendasmvcdb;uid=root;pwd=1234",
+    Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.27-mysql")));
 
 
 
