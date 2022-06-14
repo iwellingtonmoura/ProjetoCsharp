@@ -16,6 +16,7 @@
     <None Remove="Microsoft.PowerShell.Commands.Utility" />
     <None Remove="NuGet.PackageManagement" />
     <None Remove="Models\Enums\" />
+    <None Remove="Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.5" />
@@ -32,5 +33,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\Enums\" />
+    <Folder Include="Interfaces\" />
   </ItemGroup>
 </Project>
