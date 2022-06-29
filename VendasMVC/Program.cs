@@ -3,7 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using VendasMVC.Data;
 using MySqlConnector;
+using VendasMVC.Services;
 using VendasMVC.Interfaces;
+
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<VendasMVCContext>(options =>
@@ -16,7 +18,8 @@ builder.Services.AddDbContext<VendasMVCContext>(options =>
 
 builder.Services.AddRazorPages();
 
-builder.Services.AddScoped<ISeedingService, SeedingService>();
+builder.Services.AddScoped<ISeedingService,SeedingService>();
+//builder.Services.AddScoped<SellerService>();
 
 var app = builder.Build();
 
